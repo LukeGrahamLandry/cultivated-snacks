@@ -26,16 +26,15 @@ public class ModMain {
 
     public ModMain() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        modEventBus.addListener(this::setup);
 
         ItemInit.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    @SubscribeEvent
-    public void setup(FMLCommonSetupEvent event){
-        LOGGER.debug("setup");
-        BrewingRecipeRegistry.addRecipe(Ingredient.of(Items.COAL), Ingredient.of(Items.STICK), new ItemStack(Items.IRON_AXE));
+    private void setup(FMLCommonSetupEvent event){
+        LOGGER.debug("the setup");
         Item teaLeaf = ForgeRegistries.ITEMS.getValue(new ResourceLocation("thermal", "tea"));
         BrewingRecipeRegistry.addRecipe(Ingredient.of(ItemInit.WATER_MUG.get()), Ingredient.of(teaLeaf), new ItemStack(ItemInit.TEA_MUG.get()));
     }
