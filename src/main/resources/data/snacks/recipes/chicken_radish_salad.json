@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "@#@",
+        "///"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cooked_chicken"
+        },
+        "/": {
+          "item": "thermal:spinach"
+      },
+      "@": {
+        "item": "thermal:radish"
+    }
+    },
+    "result": {
+        "item": "snacks:chicken_radish_salad"
+    }
+}

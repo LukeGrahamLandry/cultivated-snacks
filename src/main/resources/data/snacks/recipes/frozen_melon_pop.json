@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "@@@",
+        "@/@",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "/": {
+          "item": "thermal:frost_melon_slice"
+        },
+        "@": {
+          "tag": "snacks:ice"
+      }
+    },
+    "result": {
+        "item": "snacks:frozen_melon_pop",
+        "count": 5
+    }
+}

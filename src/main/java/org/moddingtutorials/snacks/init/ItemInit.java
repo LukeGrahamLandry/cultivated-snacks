@@ -2,7 +2,12 @@ package org.moddingtutorials.snacks.init;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import org.moddingtutorials.snacks.ModMain;
+import org.moddingtutorials.snacks.items.FullMugItem;
+import org.moddingtutorials.snacks.items.MugItem;
+
 import net.minecraft.item.*;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -16,13 +21,28 @@ public class ItemInit {
 
     public static final List<Supplier<Item>> basicItems = new ArrayList<>();
 
+    public static final Supplier<Item> WATER_MUG = create("water_mug", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance)));
+    public static final Supplier<Item> MUG = create("mug", () -> new MugItem(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance)));
+    public static final Supplier<Item> TEA_MUG = create("tea_mug", () -> new FullMugItem(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance).food(new Food.Builder().build())));
+    public static final Supplier<Item> CLAY_MUG = create("clay_mug", () -> new Item(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance)));
+
     public static void register(IEventBus modEventBus) {
+        createFood("chicken_and_spinach", new Food.Builder().nutrition(6).saturationMod(0.8F));
+        createFood("frozen_melon_pop", new Food.Builder().nutrition(1).saturationMod(0.1F).effect(()->new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 15*20), 1).effect(()->new EffectInstance(Effects.FIRE_RESISTANCE, 15*20), 1));
+        createFood("chicken_radish_salad", new Food.Builder().nutrition(6).saturationMod(0.8F));        
+
         ITEMS.register(modEventBus);
     }
 
     public static void createFood(String name, Food.Builder food){
         RegistryObject<Item> result = ITEMS.register(name, () -> new Item(new Item.Properties().tab(ModCreativeTab.instance).food(food.build())));
         basicItems.add(result);
+    }
+
+    public static Supplier<Item> create(String name, Supplier<Item> item){
+        RegistryObject<Item> result = ITEMS.register(name, item);
+        basicItems.add(result);
+        return result;
     }
 
     public static class ModCreativeTab extends ItemGroup {

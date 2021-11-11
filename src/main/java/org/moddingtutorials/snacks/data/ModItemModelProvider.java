@@ -19,10 +19,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for (Supplier<Item> obj : ItemInit.basicItems){
-            getBuilder(obj.get().getRegistryName().toString())
+        for (Supplier<Item> item : ItemInit.basicItems){
+            getBuilder(item.get().getRegistryName().toString())
                     .parent(new ModelFile.UncheckedModelFile("item/generated"))
-                    .texture("layer0", obj.get().getRegistryName());
+                    .texture("layer0", new ResourceLocation(ModMain.MOD_ID, "item/" + item.get().getRegistryName().getPath()));
         }
     }
 }

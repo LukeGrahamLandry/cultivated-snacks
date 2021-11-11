@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "///",
+        "/#/",
+        "///"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cooked_chicken"
+        },
+        "/": {
+          "item": "thermal:spinach"
+      }
+    },
+    "result": {
+        "item": "snacks:chicken_and_spinach"
+    }
+}

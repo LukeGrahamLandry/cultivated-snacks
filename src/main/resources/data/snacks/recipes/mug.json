@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "snacks:clay_mug"
+    },
+    "result": "snacks:mug",
+    "experience": 1.0,
+    "cookingtime": 100
+}
