@@ -3,7 +3,13 @@
     "item.snacks.frozen_melon_pop": "Frozen Melon Pop",
     "item.snacks.chicken_radish_salad": "Chicken and Radish Salad",
     "item.snacks.mug": "Mug",
-    "item.snacks.tea_mug": "Tea Mug",
+    "item.snacks.tea_mug": "Tea",
     "item.snacks.water_mug": "Water Mug",
-    "item.snacks.clay_mug": "Clay Mug"
+    "item.snacks.clay_mug": "Clay Mug",
+    "effect.snacks.coffee_grinds": "Choking",
+    "item.snacks.coffee_grinds": "Coffee grinds",
+    "effect.snacks.tea": "Immunity",
+    "item.snacks.onion_rings": "Onion Rings",
+    "item.snacks.coffee_mug": "Coffee",
+    "block.snacks.hops_barrel": "Hops Barrel"
 }

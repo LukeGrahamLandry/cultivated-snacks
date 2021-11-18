@@ -16,6 +16,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.moddingtutorials.snacks.init.BlockInit;
+import org.moddingtutorials.snacks.init.EffectInit;
 import org.moddingtutorials.snacks.init.ItemInit;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,14 +31,18 @@ public class ModMain {
         modEventBus.addListener(this::setup);
 
         ItemInit.register(modEventBus);
+        EffectInit.POTIONS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        BlockInit.BLOCKS.register(modEventBus);
     }
 
     private void setup(FMLCommonSetupEvent event){
         LOGGER.debug("the setup");
         Item teaLeaf = ForgeRegistries.ITEMS.getValue(new ResourceLocation("thermal", "tea"));
         BrewingRecipeRegistry.addRecipe(Ingredient.of(ItemInit.WATER_MUG.get()), Ingredient.of(teaLeaf), new ItemStack(ItemInit.TEA_MUG.get()));
+        BrewingRecipeRegistry.addRecipe(Ingredient.of(ItemInit.WATER_MUG.get()), Ingredient.of(ItemInit.COFFEE_GRINDS.get()), new ItemStack(ItemInit.COFFEE_MUG.get()));
     }
 
 }

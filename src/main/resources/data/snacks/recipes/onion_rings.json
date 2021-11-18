@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/#/",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "thermal:onion"
+        },
+        "/": {
+          "tag": "snacks:flour"
+      }
+    },
+    "result": {
+        "item": "snacks:onion_rings"
+    }
+}
