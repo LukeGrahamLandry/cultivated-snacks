@@ -1,6 +1,7 @@
 package org.moddingtutorials.snacks.init;
 
 import org.moddingtutorials.snacks.ModMain;
+import org.moddingtutorials.snacks.blocks.BeerBarrelBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -21,7 +22,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ModMain.MOD_ID);
 
     public static final RegistryObject<Block> HOPS_BARREL = BLOCKS.register("hops_barrel",
-            () -> new Block(Block.Properties.of(Material.WOOD).strength(2f, 3f).harvestTool(ToolType.AXE)));
+            () -> new BeerBarrelBlock(Block.Properties.of(Material.WOOD).strength(2f, 3f).harvestTool(ToolType.AXE)));
     
     @SubscribeEvent
     public static void onRegisterItems(final RegistryEvent.Register<Item> event) {

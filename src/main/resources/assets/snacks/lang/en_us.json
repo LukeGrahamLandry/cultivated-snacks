@@ -11,5 +11,8 @@
     "effect.snacks.tea": "Immunity",
     "item.snacks.onion_rings": "Onion Rings",
     "item.snacks.coffee_mug": "Coffee",
-    "block.snacks.hops_barrel": "Hops Barrel"
+    "block.snacks.hops_barrel": "Hops Barrel",
+    "item.snacks.beer": "Beer",
+    "item.snacks.sweetberry_jam": "Sweetberry Jam",
+    "item.snacks.strawberry_jam": "Strawberry Jam"
 }

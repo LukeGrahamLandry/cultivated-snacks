@@ -19,6 +19,7 @@ import org.apache.logging.log4j.Logger;
 import org.moddingtutorials.snacks.init.BlockInit;
 import org.moddingtutorials.snacks.init.EffectInit;
 import org.moddingtutorials.snacks.init.ItemInit;
+import org.moddingtutorials.snacks.init.TileEntityInit;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ModMain.MOD_ID)
@@ -36,6 +37,7 @@ public class ModMain {
         MinecraftForge.EVENT_BUS.register(this);
 
         BlockInit.BLOCKS.register(modEventBus);
+        TileEntityInit.TILE_ENTITY_TYPES.register(modEventBus);
     }
 
     private void setup(FMLCommonSetupEvent event){
