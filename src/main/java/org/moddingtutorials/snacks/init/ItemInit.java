@@ -4,6 +4,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import org.moddingtutorials.snacks.ModMain;
 import org.moddingtutorials.snacks.items.FullMugItem;
 import org.moddingtutorials.snacks.items.MugItem;
+import org.moddingtutorials.snacks.items.SkittleItem;
 
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -28,14 +29,16 @@ public class ItemInit {
     public static final Supplier<Item> COFFEE_MUG = create("coffee_mug", () -> new FullMugItem(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance).food(new Food.Builder().nutrition(1).alwaysEat().effect(()->new EffectInstance(Effects.MOVEMENT_SPEED, 16*20), 1).build())));
     public static final Supplier<Item> COFFEE_GRINDS = createFood("coffee_grinds", new Food.Builder().nutrition(1).alwaysEat().effect(()->new EffectInstance(EffectInit.COFFEEGRINDSEFFECT.get(), 16*20), 1));  
     public static final Supplier<Item> BEER = create("beer", () -> new FullMugItem(new Item.Properties().stacksTo(1).tab(ModCreativeTab.instance).food(new Food.Builder().nutrition(1).alwaysEat().effect(()->new EffectInstance(Effects.DAMAGE_BOOST, 10*20), 1).effect(()->new EffectInstance(Effects.CONFUSION, 16*20), 1).build())));
-    
+    public static final Supplier<Item> SKITTLE = create("skittle", () -> new  SkittleItem(new Item.Properties().tab(ModCreativeTab.instance)));
+
     public static void register(IEventBus modEventBus) {
-        createFood("chicken_and_spinach", new Food.Builder().nutrition(6).saturationMod(0.8F));
+        createFood("chicken_and_spinach", new Food.Builder().nutrition(8).saturationMod(0.8F));
         createFood("frozen_melon_pop", new Food.Builder().nutrition(1).saturationMod(0.1F).effect(()->new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 15*20), 1).effect(()->new EffectInstance(Effects.FIRE_RESISTANCE, 15*20), 1));
-        createFood("chicken_radish_salad", new Food.Builder().nutrition(6).saturationMod(0.8F)); 
-        createFood("onion_rings", new Food.Builder().nutrition(3).saturationMod(0.4F));     
+        createFood("chicken_radish_salad", new Food.Builder().nutrition(7).saturationMod(0.8F)); 
+        createFood("onion_rings", new Food.Builder().nutrition(4).saturationMod(0.4F));     
         create("sweetberry_jam", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(64).tab(ModCreativeTab.instance))); 
         create("strawberry_jam", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(64).tab(ModCreativeTab.instance))); 
+
 
         ITEMS.register(modEventBus);
     }
