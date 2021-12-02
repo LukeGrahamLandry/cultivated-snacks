@@ -38,6 +38,7 @@ public class ItemInit {
         createFood("onion_rings", new Food.Builder().nutrition(4).saturationMod(0.4F));     
         create("sweetberry_jam", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(64).tab(ModCreativeTab.instance))); 
         create("strawberry_jam", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(64).tab(ModCreativeTab.instance))); 
+        createFood("strawberry_pie", new Food.Builder().nutrition(7).saturationMod(0.6F));
 
 
         ITEMS.register(modEventBus);

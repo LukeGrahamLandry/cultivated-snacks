@@ -128,6 +128,7 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:thermalfoundation-222880:3412300")
     runtimeOnly fg.deobf("curse.maven:cofh-69162:3407019")
     runtimeOnly fg.deobf("curse.maven:thermal-271835:3404883")
+    runtimeOnly fg.deobf("curse.maven:foodbook-306770:3459118")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
@@ -182,3 +183,12 @@ publishing {
         }
     }
 }
+minecraft {
+    runs {
+        client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+        }
+    }
+}
+// ./gradlew runClient -D org.gradle.java.home=/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home

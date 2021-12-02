@@ -1,7 +1,7 @@
 package org.moddingtutorials.snacks.init;
 
 import org.moddingtutorials.snacks.ModMain;
-import org.moddingtutorials.tiles.BeerBarrelTile;
+import org.moddingtutorials.snacks.tiles.BeerBarrelTile;
 
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;

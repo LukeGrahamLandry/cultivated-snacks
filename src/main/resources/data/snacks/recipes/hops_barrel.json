@@ -1,12 +1,18 @@
 {
     "type": "minecraft:crafting_shaped",
-    "ingredients": [
-        {
+    "pattern": [
+        " / ",
+        "/#/",
+        " / "
+    ],
+    "key": {
+        "#": {
             "item": "minecraft:barrel"
-        },{
+        },
+        "/": {
           "tag": "snacks:fermentable"
       }
-    ],
+    },
     "result": {
         "item": "snacks:hops_barrel"
     }

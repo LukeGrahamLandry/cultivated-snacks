@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "/@/",
+        "###"
+    ],
+    "key": {
+        "#": {
+          "item": "minecraft:wheat"
+      },
+      "/": {
+        "item": "thermal:strawberry"
+    },
+      "@": {
+        "item": "snacks:strawberry_jam"
+    }
+    },
+    "result": {
+        "item": "snacks:strawberry_pie"
+    }
+}

@@ -1,4 +1,4 @@
-package org.moddingtutorials.tiles;
+package org.moddingtutorials.snacks.tiles;
 
 import org.moddingtutorials.snacks.init.TileEntityInit;
 

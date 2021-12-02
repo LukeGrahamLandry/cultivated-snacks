@@ -2,7 +2,7 @@ package org.moddingtutorials.snacks.blocks;
 
 import org.moddingtutorials.snacks.init.ItemInit;
 import org.moddingtutorials.snacks.init.TileEntityInit;
-import org.moddingtutorials.tiles.BeerBarrelTile;
+import org.moddingtutorials.snacks.tiles.BeerBarrelTile;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
