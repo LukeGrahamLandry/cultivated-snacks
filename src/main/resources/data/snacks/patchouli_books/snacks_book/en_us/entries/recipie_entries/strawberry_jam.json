@@ -1,0 +1,11 @@
+{
+    "name": "Strawberry Jam",
+    "icon": "minecraft:writable_book",
+    "category": "snacks:ingredients",
+    "pages": [
+        {
+            "type": "text",
+            "text": "This is a test entry, but it should show up!"
+        }
+    ]
+}

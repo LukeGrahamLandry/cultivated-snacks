@@ -20,10 +20,10 @@ public class GiveBookOnJoin {
             return;
         }
         playerdata.putBoolean("Has gotten book", true);
-        Item givebook = ForgeRegistries.ITEMS.getValue(new ResourceLocation("patchouli", "snacks:guide_book"));
+        Item givebook = ForgeRegistries.ITEMS.getValue(new ResourceLocation("patchouli", "guide_book"));
         ItemStack bookstack = new ItemStack(givebook);
         CompoundNBT data = bookstack.getOrCreateTag();
-        data.putString("patchouli:book", "snacks_book");
+        data.putString("patchouli:book", "snacks:snacks_book");
         bookstack.setTag(data);
         event.getPlayer().addItem(bookstack);
     }

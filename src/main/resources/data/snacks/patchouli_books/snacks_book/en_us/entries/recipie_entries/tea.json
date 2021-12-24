@@ -1,0 +1,23 @@
+{
+    "name": "Tea",
+    "icon": "minecraft:writable_book",
+    "category": "snacks:nutrients_inducing_substances",
+    "pages": [
+        {
+            "type": "text",
+            "text": "When my friend got married, his honeymoon was in Witch Swamp, which is, as everyone knows, is the new hot spots for couples to go for all of their romantic excursions, regardless of the occasion. It has hot springs scented with swamp water, vine hammocks, and swamp water soup flavoured with crushed vines. Absolutely romantic! Unfortunately, the Witch Swamp was attacked by ancient"
+        },
+        {
+            "type": "text",
+            "text": "witches and their cats while my friend was there, and he had to run and hide in the swamp. Now, it's a good thing that my friend is notoriously good at hide and seek, as he was not found by the witches. It reminds me of the time when he came over when we were little and we decided to play hide and seek, and- alas, that is a story for another time. Back to the current story. My friend was so good at hiding that the witches didn't see him even when they were standing right in front of him, fighting"
+        },
+        {
+            "type": "text",
+            "text": "the guard force stationed at Witch Swamp. Due to my friend's superior hiding skills, neither fighting party noticed that he was hiding nearby. As a result, neither side noticed when my friend was hit by a stray poison pot thrown by a witch. As a result, my friend was left there, poisoned, even after the witches had been subdued and the customers of Witch Swamp could return to their every day activities. As my friend was crawling around, trying to find something that would get rid of the poison, he found a"
+        },
+        {
+            "type": "text",
+            "text": "mug of some substance, which he was pretty sure was called tea (it was). Hoping that if nothing else, the liquid would dilute the poison, my friend downed the tea, and immediately felt better. Looking around for how to make more of this refreshing substance, my friend noticed a brewing stand with an empty mug in the base and a tea leaf at the top and thus concluded that is how tea is made, though my friend could not find tea leaves. If you do, let me know!"
+        }
+    ]
+}
